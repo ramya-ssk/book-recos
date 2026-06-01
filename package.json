@@ -1,0 +1,29 @@
+{
+  "name": "bookrec",
+  "version": "1.0.0",
+  "description": "Book recommendation engine using Goodreads reviews, OpenAI embeddings, and Claude",
+  "main": "dist/api/server.js",
+  "scripts": {
+    "build": "tsc",
+    "scrape": "ts-node src/scraper/goodreads.ts",
+    "index": "ts-node src/indexer/index.ts",
+    "start": "ts-node src/api/server.ts",
+    "dev": "nodemon --exec ts-node src/api/server.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.20.9",
+    "axios": "^1.16.1",
+    "cheerio": "^1.2.0",
+    "express": "^4.22.2",
+    "openai": "^4.104.0",
+    "vectra": "^0.15.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.0.0",
+    "nodemon": "^3.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.3.0"
+  }
+}
