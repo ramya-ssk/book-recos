@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "scrape": "ts-node src/scraper/goodreads.ts",
+    "load": "ts-node src/scraper/ucsd-loader.ts",
     "index": "ts-node src/indexer/index.ts",
     "start": "ts-node src/api/server.ts",
     "dev": "nodemon --exec ts-node src/api/server.ts"
